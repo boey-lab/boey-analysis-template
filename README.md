@@ -8,7 +8,6 @@
         this gives you a personal copy at `https://github.com/YOUR_USERNAME/punctalyze`
 - [ ] clone your fork locally by clicking **"<>Code"** at the top right of the GitHub page, then **"Open with GitHub Desktop"**
 - [ ] select your local path and open the repo by clicking the **"open in VS Code"** option
-- [ ] create a new branch named yourname_dev, always use this branch when making changes
 - [ ] continue to the checklist below
 
 ### if you already forked punctalyze: make your own image analysis repo
@@ -23,6 +22,11 @@
 git submodule add https://github.com/YOUR_USERNAME/punctalyze.git punctalyze 
 ~~~
 ^^^ this adds your forked 'punctalyze' pipeline to this experiment repository
+- [ ] navigate to the submodule and add a new branch unique to this analysis
+~~~
+cd punctalyze
+git checkout -b dev_branch_name
+~~~
 - [ ] update *header* at top of README.md and *experiment details* below
 - [ ] upload raw data, or update the input_path in ```1_initial_cleanup.py```
 
