@@ -17,12 +17,17 @@
 - [ ] open this repository (which you just cloned) in VS Code or your editor of choice
 - [ ] uncomment raw_data folders in gitignore 
 - [ ] delete placeholder files raw_data folders
-- [ ] import the editable analysis submodule in vscode terminal: 
+- [ ] import the editable analysis submodule in vscode terminal
 ~~~ 
 git submodule add https://github.com/YOUR_USERNAME/punctalyze.git punctalyze 
 ~~~
 ^^^ this adds your forked 'punctalyze' pipeline to this experiment repository
-- [ ] navigate to the submodule and add a new branch unique to this analysis
+~~~ 
+git submodule add -b branch_name https://github.com/YOUR_USERNAME/punctalyze punctalyze 
+~~~
+^^^^ this adds your forked 'punctalyze' pipeline to this experiment repository, specifically the branch specified with '-b <branch_name>'
+
+- [ ] navigate to the submodule and add a new branch unique to this analysis (if you don't already have one)
 ~~~
 cd punctalyze
 git checkout -b dev_branch_name
