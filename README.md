@@ -53,16 +53,31 @@ See results folder
 - averaging puncta feature information per cell
 - plotting
 
+## General git/submodule workflow schematic
+```
+experiment repo
+   └── submodule → your fork
+            └── feature branch → active hacking
+```            
+
 ## Making contributions to punctalyze
 ### if you make changes to your fork that you want to merge to the main branch at [punctalyze](https://github.com/ocarmo/punctalyze):
-- [ ] push your commits in VS Code source control
+```
+feature branch
+   ↓ PR
+boey-lab/punctalyze (upstream)
+```
+checklist if preferred:
+- [ ] push your commits in VS Code source control or terminal
 - [ ] go to your fork on GitHub
 - [ ] click Compare & pull request
-- [ ] set the base repo to original-owner/repoA and the base branch to main
+- [ ] set the base repo to original-owner/repo and the base branch to main
 - [ ] write a description of your changes
 - [ ] click Create pull request
 
+Thanks for using and contributing to punctalyze! Your improvements help make image analysis easier for everyone. If you have any questions, feel free to open an issue or contact the maintainer.
 
+## Synching punctalyze
 ### to keep your fork synced with the original punctalyze:
 ```bash
 git remote add upstream https://github.com/ocarmo/punctalyze.git
@@ -71,27 +86,10 @@ git checkout main
 git merge upstream/main
 git push origin main
 ```
-Thanks for using and contributing to punctalyze. Your improvements help make image analysis easier for everyone.
 
-If you have any questions, feel free to open an issue or contact the maintainer.
 
 ### if you want to update punctalyze inside your pipeline project, and you're not contributing changes to it, run:
 ```bash
 git submodule update --remote --merge
 git commit -am "Update submodule to latest punctalyze commit"
-```
-
-### best practices:
-organize your repo like this:
-```bash
-your_project/
-├── raw_data/
-├── notebooks/
-├── src/
-│   ├── pre_processing/
-│   ├── post_processing/
-│   └── your_wrappers.py
-├── core_scripts/   ← (Git submodule: punctalyze)
-├── README.md
-└── environment.yml
 ```
